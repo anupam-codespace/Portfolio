@@ -288,7 +288,7 @@ export default function Portfolio() {
                   <Github size={20} className="sm:w-6 sm:h-6" />
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/anupamsaha"
+                  href="https://www.linkedin.com/in/anupam-saha-3a997321b/"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Linkedin size={20} className="sm:w-6 sm:h-6" />
