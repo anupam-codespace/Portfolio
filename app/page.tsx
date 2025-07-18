@@ -282,7 +282,7 @@ export default function Portfolio() {
 
               <div className="flex items-center space-x-6 sm:space-x-8 pt-6">
                 <Link
-                  href="https://github.com/anupamsaha"
+                  href="https://github.com/anupam-codespace"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Github size={20} className="sm:w-6 sm:h-6" />
@@ -294,7 +294,7 @@ export default function Portfolio() {
                   <Linkedin size={20} className="sm:w-6 sm:h-6" />
                 </Link>
                 <Link
-                  href="https://twitter.com/anupamsaha"
+                  href="https://x.com/AnupamSaha070"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Twitter size={20} className="sm:w-6 sm:h-6" />
