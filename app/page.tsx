@@ -637,7 +637,7 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors group">
                   <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm font-medium">anupam@example.com</span>
+                  <span className="text-sm font-medium">anupamsaha.work@gmail.com</span>
                 </div>
                 <div className="flex space-x-4">
                   <Link
@@ -667,7 +667,7 @@ export default function Portfolio() {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-                <span>© 2024 Anupam Saha.</span>
+                <span>© 2025-26 Anupam Saha.</span>
                 <span className="hidden sm:inline">Made with</span>
                 <Heart className="h-4 w-4 text-red-500 animate-pulse" />
                 <span className="hidden sm:inline">and</span>
