@@ -12,6 +12,7 @@ import LoadingScreen from "@/components/loading-screen"
 import FloatingElements from "@/components/floating-elements"
 import SkillsScroll from "@/components/skills-scroll"
 import ScrollProgress from "@/components/scroll-progress"
+import ScrollToTop from "@/components/scroll-to-top"
 import {
   Github,
   Linkedin,
@@ -133,8 +134,8 @@ export default function Portfolio() {
         "A comprehensive e-commerce solution featuring real-time inventory management, secure payment processing, advanced analytics, and responsive design optimized for conversion across all devices.",
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "#",
+      githubUrl: "https://github.com/anupam-codespace",
       featured: true,
     },
     {
@@ -143,8 +144,8 @@ export default function Portfolio() {
         "A collaborative workspace platform with real-time updates, file sharing, team communication, task automation, and comprehensive project tracking capabilities for modern teams.",
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "#",
+      githubUrl: "https://github.com/anupam-codespace",
       featured: true,
     },
     {
@@ -153,8 +154,8 @@ export default function Portfolio() {
         "An intelligent business intelligence platform leveraging machine learning for predictive analytics, automated insights, and interactive data visualizations with real-time reporting.",
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["Python", "React", "TensorFlow", "D3.js"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "#",
+      githubUrl: "https://github.com/anupam-codespace",
       featured: false,
     },
     {
@@ -163,8 +164,8 @@ export default function Portfolio() {
         "A secure financial application with biometric authentication, real-time transactions, budget tracking, investment management, and comprehensive financial planning tools.",
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["React Native", "Firebase", "Stripe", "JWT"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "#",
+      githubUrl: "https://github.com/anupam-codespace",
       featured: false,
     },
   ]
@@ -177,12 +178,13 @@ export default function Portfolio() {
     <div className="bg-background text-foreground min-h-screen relative overflow-x-hidden">
       <ScrollProgress />
       <FloatingElements />
+      <ScrollToTop />
 
       {/* Navigation */}
       <nav className="fixed top-1 w-full bg-background/90 backdrop-blur-md border-b border-border z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-primary tracking-tight">AS</div>
+            <div className="text-xl font-bold text-primary tracking-tight">ANUPAM</div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center justify-center flex-1">
@@ -259,8 +261,8 @@ export default function Portfolio() {
               </div>
 
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl font-medium">
-                I craft scalable web applications and intuitive user experiences that solve real-world problems. Turning
-                innovative ideas into digital reality through clean code and thoughtful design.
+                I believe code is more than functions—it's a bridge to dreams. Through design and development, I
+                transform ideas into user-centered realities that matter.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -271,13 +273,20 @@ export default function Portfolio() {
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
-                <Button
-                  variant="outline"
-                  className="border-border hover:bg-muted px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 font-bold text-sm sm:text-base bg-transparent"
-                >
-                  <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Download CV
-                </Button>
+                <Link
+  href="https://drive.google.com/drive/folders/1KuEm2UaJsXE9rVz6yZq9abuQuAh6JFZ3?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="outline"
+    className="border-border hover:bg-muted px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 font-bold text-sm sm:text-base bg-transparent"
+  >
+    <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+    Download Resume
+  </Button>
+</Link>
+
               </div>
 
               <div className="flex items-center space-x-6 sm:space-x-8 pt-6">
@@ -300,7 +309,9 @@ export default function Portfolio() {
                   <Twitter size={20} className="sm:w-6 sm:h-6" />
                 </Link>
                 <Link
-                  href="mailto:anupamsaha.work@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&to=anupamsaha.work@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Mail size={20} className="sm:w-6 sm:h-6" />
@@ -352,16 +363,35 @@ export default function Portfolio() {
               </Button>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square relative">
-                <Image
-                  src="https://drive.google.com/uc?export=view&id=1gb-i3ksNknPSo6c9ZWzOg3ynXoJkkJQb"
-                  alt="About me"
-                  width={500}
-                  height={500}
-                  className="rounded-2xl shadow-2xl object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent rounded-2xl"></div>
+            <div className="relative order-first lg:order-last">
+              <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+                {/* Background decorative elements */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl opacity-30"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+
+                {/* Main image container */}
+                <div className="relative aspect-square w-full max-w-sm mx-auto lg:max-w-none">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-2xl"></div>
+                  <Image
+                    src="/profile-image.jpeg"
+                    alt="Anupam Saha - Full Stack Developer"
+                    width={400}
+                    height={400}
+                    className="relative z-10 w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-primary/20"
+                    priority
+                  />
+
+                  {/* Floating badge */}
+                  <div className="absolute -bottom-4 -right-4 z-20">
+                    <div className="bg-card border border-border rounded-full px-4 py-2 shadow-lg backdrop-blur-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-medium text-foreground">Available</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -499,24 +529,26 @@ export default function Portfolio() {
                     ))}
                   </div>
 
-                  <div className="flex gap-3 sm:gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                     <Button
                       asChild
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 font-bold text-xs sm:text-sm"
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 font-bold text-sm sm:text-base py-3 sm:py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] transform"
                     >
-                      <Link href={project.liveUrl}>
-                        <ExternalLink className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                         Live Demo
                       </Link>
                     </Button>
                     <Button
                       asChild
                       variant="outline"
-                      className="border-border hover:bg-muted flex-1 bg-transparent font-bold text-xs sm:text-sm"
+                      size="lg"
+                      className="border-2 border-primary/20 hover:border-primary/50 hover:bg-primary/5 flex-1 bg-transparent font-bold text-sm sm:text-base py-3 sm:py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] transform text-foreground"
                     >
-                      <Link href={project.githubUrl}>
-                        <Github className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                        Code
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                        View Code
                       </Link>
                     </Button>
                   </div>
@@ -555,7 +587,7 @@ export default function Portfolio() {
                     <Input
                       type="email"
                       placeholder="your.email@example.com"
-                      className="bg-background border-border focus:border-primary text-foreground h-10 sm:h-12 font-medium text-sm sm:text-base"
+                      className="bg-background border-border focus:border-primary text-foreground h-10 sm:h-12 font-medium text-sm:text-base"
                     />
                   </div>
                 </div>
@@ -563,7 +595,7 @@ export default function Portfolio() {
                   <label className="block text-sm font-bold text-foreground mb-2 sm:mb-3">Subject</label>
                   <Input
                     placeholder="Subject"
-                    className="bg-background border-border focus:border-primary text-foreground h-10 sm:h-12 font-medium text-sm sm:text-base"
+                    className="bg-background border-border focus:border-primary text-foreground h-10 sm:h-12 font-medium text-sm:text-base"
                   />
                 </div>
                 <div>
@@ -571,10 +603,10 @@ export default function Portfolio() {
                   <Textarea
                     placeholder="Your message..."
                     rows={6}
-                    className="bg-background border-border focus:border-primary text-foreground font-medium text-sm sm:text-base"
+                    className="bg-background border-border focus:border-primary text-foreground font-medium text-sm:text-base"
                   />
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 text-sm sm:text-base">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 text-sm:text-base">
                   <Send className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Send Message
                 </Button>
@@ -606,9 +638,7 @@ export default function Portfolio() {
                   <p className="text-sm text-muted-foreground">Full Stack Developer</p>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed max-w-sm">
-                Crafting digital experiences through innovative web solutions and clean, scalable code.
-              </p>
+              <p className="text-muted-foreground leading-relaxed max-w-sm">Turning Code into Dreams!</p>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm text-muted-foreground">Available for new opportunities</span>
@@ -641,19 +671,19 @@ export default function Portfolio() {
                 </div>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://github.com/anupamsaha"
+                    href="https://github.com/anupam-codespace"
                     className="w-10 h-10 bg-muted hover:bg-primary/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 transform"
                   >
                     <Github size={18} />
                   </Link>
                   <Link
-                    href="https://linkedin.com/in/anupamsaha"
+                    href="https://www.linkedin.com/in/anupam-saha-3a997321b/"
                     className="w-10 h-10 bg-muted hover:bg-primary/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 transform"
                   >
                     <Linkedin size={18} />
                   </Link>
                   <Link
-                    href="https://twitter.com/anupamsaha"
+                    href="https://x.com/AnupamSaha070"
                     className="w-10 h-10 bg-muted hover:bg-primary/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 transform"
                   >
                     <Twitter size={18} />
@@ -667,16 +697,16 @@ export default function Portfolio() {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               <div className="flex items-center space-x-2 text-muted-foreground text-sm">
-                <span>© 2025-26 Anupam Saha.</span>
-                <span className="hidden sm:inline">Made with</span>
+                <span>© Anupam Saha 2025 - ∞ </span>
+                <span className="hidden sm:inline"> . Made with</span>
                 <Heart className="h-4 w-4 text-red-500 animate-pulse" />
                 <span className="hidden sm:inline">and</span>
                 <Coffee className="h-4 w-4 text-primary" />
               </div>
               <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                <span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
-                <span>•</span>
-                <span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
+                <span className="hover:text-primary transition-colors cursor-pointer"></span>
+                <span></span>
+                <span className="hover:text-primary transition-colors cursor-pointer"></span>
               </div>
             </div>
           </div>
