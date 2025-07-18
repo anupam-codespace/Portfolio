@@ -355,7 +355,7 @@ export default function Portfolio() {
             <div className="relative">
               <div className="aspect-square relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/1xmedia.jpeg?height=500&width=500"
                   alt="About me"
                   width={500}
                   height={500}
