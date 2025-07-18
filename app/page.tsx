@@ -300,7 +300,7 @@ export default function Portfolio() {
                   <Twitter size={20} className="sm:w-6 sm:h-6" />
                 </Link>
                 <Link
-                  href="mailto:anupam@example.com"
+                  href="mailto:anupamsaha.work@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Mail size={20} className="sm:w-6 sm:h-6" />
@@ -355,7 +355,7 @@ export default function Portfolio() {
             <div className="relative">
               <div className="aspect-square relative">
                 <Image
-                  src="/1xmedia.jpeg?height=500&width=500"
+                  src="/placeholder.svg?height=500&width=500"
                   alt="About me"
                   width={500}
                   height={500}
