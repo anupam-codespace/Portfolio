@@ -184,7 +184,7 @@ export default function Portfolio() {
       <nav className="fixed top-1 w-full bg-background/90 backdrop-blur-md border-b border-border z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-primary tracking-tight">ANUPAM</div>
+            <div className="text-xl font-bold text-primary tracking-tight">ANUPAM.DEV</div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center justify-center flex-1">
@@ -337,7 +337,7 @@ export default function Portfolio() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4 sm:space-y-6">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary tracking-tight">Who I Am</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary tracking-tight">Who I Am ?</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed font-medium text-sm sm:text-base">
                   <p>
                     I'm a Full Stack Developer specializing in modern web technologies. I build scalable applications
